@@ -1,0 +1,11 @@
+body {
+  margin: 60px 10px;
+}
+
+.highlight {
+  background-color: #ffff88 !important;
+}
+
+.search-result tbody tr.even:hover, .search-result tbody tr.odd:hover {
+  background-color: #ffff88 !important;
+}
