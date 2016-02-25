@@ -12,12 +12,12 @@
        specified for component-scanning -->
   <context-param>
       <param-name>contextConfigLocation</param-name>
-      <param-value>com.jajb</param-value>
+      <param-value>com.wguzgg.raspberry</param-value>
   </context-param>
   
   <context-param>
       <param-name>globalConfigurePrefix</param-name>
-      <param-value>jajb</param-value>
+      <param-value>raspberry</param-value>
   </context-param>
 
   <listener>

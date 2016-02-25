@@ -12,18 +12,18 @@
        specified for component-scanning -->
   <context-param>
       <param-name>contextConfigLocation</param-name>
-      <param-value>com.jajb</param-value>
+      <param-value>com.wguzgg.raspberry</param-value>
   </context-param>
 
   <context-param>
       <param-name>globalConfigurePrefix</param-name>
-      <param-value>jajb</param-value>
+      <param-value>raspberry</param-value>
   </context-param>
 
   <listener>
       <!-- <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
        -->
-      <listener-class>com.jajb.web.WebContextLoaderListener</listener-class>
+      <listener-class>com.wguzgg.raspberry.web.WebContextLoaderListener</listener-class>
   </listener>
 
     <servlet>
@@ -53,27 +53,27 @@
     </welcome-file-list>
     <error-page>
         <error-code>404</error-code>
-        <location>/workbook/404.html</location>
+        <location>/raspberry/404.html</location>
     </error-page>
     <error-page>
         <error-code>500</error-code>
-        <location>/workbook/error.html</location>
+        <location>/raspberry/error.html</location>
     </error-page>
     <error-page>
-        <exception-type>com.nvidia.base.exception.GeneralException</exception-type>
-        <location>/workbook/error.html</location>
+        <exception-type>com.wguzgg.raspberry.base.exception.GeneralException</exception-type>
+        <location>/raspberry/error.html</location>
     </error-page>
     <error-page>
         <exception-type>javax.servlet.ServletException</exception-type>
-        <location>/workbook/error.html</location>
+        <location>/raspberry/error.html</location>
     </error-page>
     <error-page>
         <exception-type>java.lang.Exception</exception-type>
-        <location>/workbook/error.html</location>
+        <location>/raspberry/error.html</location>
     </error-page>
     <error-page>
      	<exception-type>java.lang.Throwable</exception-type>
-     	<location>/workbook/error.html</location>
+     	<location>/raspberry/error.html</location>
    	</error-page>
    	
      <security-constraint>
@@ -99,6 +99,6 @@
 <!-- Require basic authentication -->
      <login-config>
         <auth-method>BASIC</auth-method>
-        <realm-name>Jajb</realm-name>
+        <realm-name>raspberry</realm-name>
     </login-config>
 </web-app>

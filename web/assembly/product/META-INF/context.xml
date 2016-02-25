@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context antiJARLocking="true" path="jajb">
-    <Realm className="com.jajb.web.realm.JajbAuthRealm"/>
+<Context antiJARLocking="true" path="rasp">
+    <Realm className="com.wguzgg.raspberry.web.realm.JajbAuthRealm"/>
 </Context>
