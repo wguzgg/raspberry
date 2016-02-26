@@ -15,18 +15,22 @@ import com.wguzgg.raspberry.data.entity.IEntity;
 import com.wguzgg.raspberry.service.IService;
 import com.wguzgg.raspberry.util.ServiceManager;
 import com.wguzgg.raspberry.util.spring.SpringFactory;
+import org.springframework.context.ApplicationContext;
 
 @Service
 @Transactional
 public abstract class AbstractService<T extends IEntity, E extends IDao<T>> implements IService<T> {
 
+        @Autowired
+        private ApplicationContext applicationContext;
 	@Autowired
 	protected ServiceManager serviceManager;
 	protected E dao;
 
 	@PostConstruct
 	public void setup() {
-		E dao = SpringFactory.getInstance().getBean(getDaoClass());
+            System.out.println("init service " + this.getClass().getName());
+		E dao = (E) applicationContext.getBean(getDaoClass());
 		setDao(dao);
 		String entityName = dao.getPersistantType().getSimpleName();
 		Table table = dao.getPersistantType().getAnnotation(Table.class);

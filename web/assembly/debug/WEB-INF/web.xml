@@ -23,7 +23,7 @@
   <listener>
       <!-- <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
        -->
-      <listener-class>com.jajb.web.WebContextLoaderListener</listener-class>
+      <listener-class>com.wguzgg.raspberry.web.WebContextLoaderListener</listener-class>
   </listener>
   
     <servlet>

@@ -242,11 +242,10 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>postgresql</groupId>
-			<artifactId>postgresql</artifactId>
-			<version>9.1-901.jdbc4</version>
-			<scope>provided</scope>
-		</dependency>
+                    <groupId>com.h2database</groupId>
+                    <artifactId>h2</artifactId>
+                    <version>1.4.191</version>
+                </dependency>
 
 		<!-- Test -->
 		<dependency>

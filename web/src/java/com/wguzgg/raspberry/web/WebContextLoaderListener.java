@@ -10,6 +10,7 @@ public class WebContextLoaderListener extends ContextLoaderListener {
 
     @Override
     public void contextInitialized(ServletContextEvent event) {
+        System.out.println("init web context");
         Constant.GLOBAL_CONFIGURE_PREFIX = event.getServletContext().getInitParameter("globalConfigurePrefix");
         super.contextInitialized(event);
     }

@@ -82,9 +82,9 @@ public class GlobalConfigure {
         put(Constant.GLOBAL_CATEGORY.category_default.name(), Constant.GLOBAL_DEFAULT_KEY_ENV_SCAN_PACKAGES_FOR_HIBERNATE, "");
 
         put(Constant.GLOBAL_CATEGORY.category_hibernate.name(),
-                "hibernate.connection.driver_class", "com.mysql.jdbc.Driver");
+                "hibernate.connection.driver_class", "org.h2.Driver");
         put(Constant.GLOBAL_CATEGORY.category_hibernate.name(), "hibernate.connection.url",
-                "jdbc:mysql://localhost:3306/jajb");
+                "jdbc:h2:~/raspberry");
         put(Constant.GLOBAL_CATEGORY.category_hibernate.name(),
                 "hibernate.connection.username", "root");
         put(Constant.GLOBAL_CATEGORY.category_hibernate.name(),
@@ -109,7 +109,7 @@ public class GlobalConfigure {
         put(Constant.GLOBAL_CATEGORY.category_hibernate.name(),
                 "hibernate.c3p0.idle_test_period", "100");
         put(Constant.GLOBAL_CATEGORY.category_hibernate.name(), "hibernate.dialect",
-                "org.hibernate.dialect.MySQL5Dialect");
+                "org.hibernate.dialect.H2Dialect");
         put(Constant.GLOBAL_CATEGORY.category_hibernate.name(), "hibernate.cache.use_second_level_cache", "false");
         put(Constant.GLOBAL_CATEGORY.category_hibernate.name(), "hibernate.cache.use_query_cache", "false");
         put(Constant.GLOBAL_CATEGORY.category_hibernate.name(), "hibernate.cache.region.factory_class", "org.hibernate.cache.ehcache.EhCacheRegionFactory");

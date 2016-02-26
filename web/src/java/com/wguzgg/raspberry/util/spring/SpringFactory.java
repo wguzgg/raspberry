@@ -50,6 +50,7 @@ public class SpringFactory implements ApplicationContextAware {
     @Override
     public void setApplicationContext(ApplicationContext applicationContext)
             throws BeansException {
+        System.out.println("init springfactory");
         ctx = applicationContext;
         instance = ctx.getBean(SpringFactory.class);
     }

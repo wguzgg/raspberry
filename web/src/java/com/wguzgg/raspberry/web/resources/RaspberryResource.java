@@ -31,13 +31,13 @@ import com.sun.jersey.spi.resource.Singleton;
 
 @Singleton
 @Path("/")
-public class JajbResource {
+public class RaspberryResource {
     protected Logger log = LoggerFactory.getLogger(this.getClass());
     
     private ServiceManager serviceManager;
     private JsonMapperFactory mapperFactory;
 
-    public JajbResource() {
+    public RaspberryResource() {
     	serviceManager = SpringFactory.getInstance().getBean(ServiceManager.class);
     	mapperFactory = SpringFactory.getInstance().getBean(JsonMapperFactory.class);
     }
@@ -46,7 +46,7 @@ public class JajbResource {
 	@Path("/echo")
 	public Response echo() {
 		return Response.status(Status.OK).type(MediaType.APPLICATION_JSON_TYPE)
-				.entity("JAJB echo").build();
+				.entity("raspberry echo").build();
 	}
     
     /**
